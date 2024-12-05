@@ -8,11 +8,11 @@ Heart diseases are leading factors of death in the United States, with millions 
 
 The dataset used for this project is a cleaned and consolidated version of the 2015 BRFSS dataset, sourced from Kaggle. It contains survey responses from over 250,000 individuals across the United States. The dataset includes a mix of health behaviors, chronic health conditions, demographic information, and medical history collected through a telephone survey.
 
-## Requirements:
+## Requirements
 
 Python, pandas, numpy, sklearn, matplotlib, seaborn
 
-### Key Features:
+### Key Features
 
 - **Health Metrics**: Blood pressure, cholesterol levels, BMI, and lifestyle factors
 - **Chronic Conditions**: Diabetes, stroke history, walking difficulties
@@ -25,22 +25,22 @@ Several features were removed during data cleaning to reduce multicollinearity a
 - **PhysHlth** and **DiffWalk**: Removed due to high correlation with **GenHlth**
 - **Education**: Removed due to high correlation with **Income**
 
-### Feature and Target Separation:
+### Feature and Target Separation
 
 - **Features**: All columns except the target variable `HeartDiseaseorAttack`
 - **Target**: `HeartDiseaseorAttack` column (binary: 0 = No, 1 = Yes)
 
 ## Data Preparation
 
-### Train-Test Split:
+### Train-Test Split
 
 - The dataset was split into training and testing sets, with 80% used for training and 20% for testing (`test_size=0.2`), ensuring reproducibility with a fixed random state.
 
-### Feature Normalization:
+### Feature Normalization
 
 - **Min-Max Scaling** was applied to numerical features to scale all features between 0 and 1. This ensures that all features contribute equally during distance calculations in the K-Nearest Neighbors (KNN) algorithm.
 
-### Resampling:
+### Resampling
 
 - **Class Imbalance**: The target variable `HeartDiseaseorAttack` showed significant imbalance (~90% instances labeled as "No").
 - **KNN Bias**: Initial evaluation with KNN showed high accuracy (~90%), but this was biased due to the class imbalance.
@@ -48,14 +48,14 @@ Several features were removed during data cleaning to reduce multicollinearity a
 
 ## Model Training & Evaluation
 
-### K-Nearest Neighbors (KNN) Classifier:
+### K-Nearest Neighbors (KNN) Classifier
 
 The following steps were performed to train and evaluate the KNN classifier:
 
 - **Baseline Model (k=3)**: The model was trained using unnormalized features as a baseline. Accuracy was reported on both the training and test sets.
 - **Optimized Model (k=35)**: The model was trained using normalized features and evaluated with accuracy, Cohen's Kappa, and recall scores to assess the impact of normalization and hyperparameter tuning.
 
-### Performance Metrics:
+### Performance Metrics
 
 - **Accuracy**: Measures the overall correctness of the model.
 - **Cohen's Kappa**: A measure of agreement between predicted and actual values, accounting for chance agreement.
@@ -78,7 +78,7 @@ The following steps were performed to train and evaluate the KNN classifier:
 
 https://www.canva.com/design/DAGYVjYO_IA/qOpBjyddozmdtBv7GV4IgQ/edit
 
-## Team:
+## Team
 
 Eliska
 Lorena
