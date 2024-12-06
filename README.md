@@ -64,15 +64,10 @@ The following steps were performed to train and evaluate the KNN classifier:
 ## Key Insights
 
 - The **recall score** was prioritized due to the medical context, where false negatives (failing to identify heart disease) can have severe consequences. Thus, the recall score was used alongside accuracy and Cohen's Kappa for a more robust model evaluation.
-
-
-## Results & Future Work
-
-.......
-
-## Conclusion
-
-.........
+- All ensemble methods achieved high recall (around 80%).
+- **AdaBoost** had the highest Cohen's Kappa (0.55)
+- **Random Forest** showed slightly stronger recall (0.80 vs. 0.79).
+- **Bayesian-optimized AdaBoost and Random Forest** models had strong recall on training data but underperformed on test data, suggesting overfitting.
 
 ## Presentation
 
